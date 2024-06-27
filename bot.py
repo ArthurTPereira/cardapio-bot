@@ -7,8 +7,8 @@ from typing import Final
 from telegram import Update, constants
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
 
-TOKEN: Final  = '6858946656:AAHcZ1TZOE86N3USzJTbo3LCfqOQ1rssARs'
-BOT_USERNAME: Final = '@EsguichoBot'
+TOKEN: Final  = 'your-token-here'
+BOT_USERNAME: Final = '@yourBot'
 url = 'https://ru.ufes.br/cardapio'
 
 def getCardapioAlmoco():
