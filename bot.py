@@ -9,6 +9,7 @@ from telegram.ext import Application, CommandHandler, MessageHandler, filters, C
 
 TOKEN: Final  = 'your-token-here'
 BOT_USERNAME: Final = '@yourBot'
+CHAT_ID: Final = 'chat-id'
 url = 'https://ru.ufes.br/cardapio'
 
 def getCardapioAlmoco():
@@ -140,10 +141,10 @@ async def custom_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text('Custom!')
 
 async def sendAlmoco(context: ContextTypes.DEFAULT_TYPE):
-    await context.bot.send_message(chat_id='-1002012355978', text=getCardapioAlmoco(),parse_mode=constants.ParseMode.HTML)
+    await context.bot.send_message(chat_id=CHAT_ID, text=getCardapioAlmoco(),parse_mode=constants.ParseMode.HTML)
 
 async def sendJanta(context: ContextTypes.DEFAULT_TYPE):
-    await context.bot.send_message(chat_id='-1002012355978', text=getCardapioJantar(),parse_mode=constants.ParseMode.HTML)
+    await context.bot.send_message(chat_id=CHAT_ID, text=getCardapioJantar(),parse_mode=constants.ParseMode.HTML)
 
 
 def handle_response(text: str) -> str:
